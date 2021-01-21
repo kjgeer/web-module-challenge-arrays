@@ -51,10 +51,6 @@ function copy(clone){
   
 }    
 
-
-
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
     1. an array as a parameter
@@ -67,6 +63,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(checkflavor){
+
    if(originalFlavors.length === 31){
        return true;
    }
@@ -90,6 +87,7 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(array, flavor){
+
     let newFlavor = array;
   
      array.unshift(flavor);
@@ -109,6 +107,7 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(newArray, removeFlavor){
+
     let flavorRemoved = newArray;
   
     newArray.pop(removeFlavor);
@@ -129,11 +128,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+
+function getFlavorByIndex(getFlavor, flavorNum,){
+
+    return getFlavor.slice(flavorNum,flavorNum+1);
+    
 }
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
 as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
@@ -149,8 +149,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(flavArray, flavString){
+  for(let i =1; i< flavArray.length; i++){
+      if(flavArray[i] === flavString){
+          flavArray.splice(i,1);
+      }
+  }return flavArray;
 }
 
 
