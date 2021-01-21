@@ -131,7 +131,9 @@ Use the getFlavorByIndex function below to do the following:
 
 function getFlavorByIndex(getFlavor, flavorNum,){
 
-    return getFlavor.slice(flavorNum,flavorNum+1);
+    const step1= getFlavor.slice(flavorNum,flavorNum+1);
+    const step2= step1.toLocaleString();
+    return step2;
     
 }
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
